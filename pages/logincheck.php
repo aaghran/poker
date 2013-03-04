@@ -10,7 +10,8 @@ $email = mysql_real_escape_string($_POST[email]);
 $sql="SELECT * FROM users WHERE username='$username' and password='$password'";
 $result=mysql_query($sql);
 $row=mysql_fetch_array($result);
-if($sql){
+echo $row;
+if($row){
 $_SESSION['username']=$row['username'];
 $time = 0; //Time (in seconds) to wait. 
 		$url = "../home.php"; //Location to send to. 
@@ -18,7 +19,7 @@ $time = 0; //Time (in seconds) to wait.
 		}
 		else { 
 $time = 0; //Time (in seconds) to wait. 
-		$url = "../index.php"; //Location to send to. 
+		$url = "../index.php?e=error"; //Location to send to. 
 		header("Refresh: $time; url=$url");		
 		}
 ?>

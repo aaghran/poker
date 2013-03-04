@@ -52,7 +52,7 @@ background-size: cover;
     <link href="css/bootstrap.css" rel="stylesheet">
     
     </head>
- <body>
+ <body style="overflow-x: auto">
 			<?php include_once("pages/nav.php") ?>
 
 <div  style="position: fixed; top:100px; left: 150px">

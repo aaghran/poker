@@ -10,7 +10,7 @@ else {
 		header("Refresh: $time; url=$url");
 }
 
-$img="<img src=\"img/cards/back.jpg \" style=\"height:100px; margin-top:5px; margin-left:5px\"";
+
 ?>
 <!--
 Project Name: PowKer
@@ -47,8 +47,7 @@ position: fixed;
 height: 200px;
 width: 400px;
 bottom: 0;
-left: 400px;
-padding: 20px;	
+left: 400px;	
 	}
 
 .player3{
@@ -70,15 +69,14 @@ right: 0;
 top: 200px;	
 	}
 .dealer{
-height: 250px;
+height: 200px;
 width: 400px;
 left: 400px;
-top: 180px;
-
+top: 200px;
+border: 1px solid black;
 position: fixed;	
 	
 	}
-	
 </style>
 
     
@@ -88,7 +86,7 @@ position: fixed;
 <div class="player player1" id="player1">
 <h3 style="color: white"><?php  echo $username;?></h3>
 <div class="row container	">
-<div class="cards" style="position: fixed; bottom:10px; left: 450px ">
+<div style="float: left">
 <?php 
 
 $card1=$arr_player_1[0];
@@ -101,7 +99,7 @@ $row1=mysql_fetch_array($result);
 //echo $row1['image'];
 echo "<div >".$row1['image']." </div> ";?>
 </div>
-<div class="cards" style="position: fixed; bottom:10px; left: 550px ">
+<div style="float: right">
 <?php
 $sql="SELECT * FROM cards WHERE value='$card2' ";
 $result=mysql_query($sql) ;
@@ -125,20 +123,20 @@ $sql="SELECT * FROM cards WHERE value='$card1' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
 //echo $row1['value'];
-echo "<div >".$img." </div> ";
+echo "<div >".$row1['image']." </div> ";
 echo "<br />";
 $sql="SELECT * FROM cards WHERE value='$card2' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
 //echo $row1['value'];
-echo "<div >".$img." </div> ";
+echo "<div >".$row1['image']." </div> ";
 ?>
 </div>
 </div>
 
 <div class="player player3" id="player3">
 Player 3
-<div class="cards" style="position: fixed; top:0px; left: 500px ">
+<div style="float: left">
 <?php 
 
 $card1=$arr_player_3[0];
@@ -149,17 +147,15 @@ $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
 
 //echo $row1['image'];
-echo "<div >".$img." </div> ";
-?>
+echo "<div >".$row1['image']." </div> ";?>
 </div>
-<div class="cards" style="position: fixed; top:20px; left: 600px ">
+<div style="float: right">
 <?php
 $sql="SELECT * FROM cards WHERE value='$card2' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
 
-echo "<div >".$img." </div> ";
-?>
+echo "<div >".$row1['image']." </div> ";?>
 
 </div>
 </div>
@@ -175,23 +171,23 @@ $sql="SELECT * FROM cards WHERE value='$card1' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
 
-echo "<div >".$img." </div> ";
+echo "<div >".$row1['image']." </div> ";
 echo "<br />";
 $sql="SELECT * FROM cards WHERE value='$card2' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
 
-echo "<div >".$img." </div> ";
+echo "<div >".$row1['image']." </div> ";
 
 
  ?>
 </div>
 
 <div class="dealer  span6" id="dealer" style="display: inline">
-
+Dealer
 <div class="row container	">
 <?php 
-
+echo "<br /> Flop :   \t";
 //echo implode(" ", $arr_flop);
 echo "<br />";
 $arr3=implode("", current($arr1));
@@ -199,10 +195,8 @@ $arr3=implode("", current($arr1));
 echo "<br />";
 $arr4=implode("", current($arr2));
 //echo $arr4;
-?>
-<div class="cards" style="position: fixed; top:180px; left: 450px ">
-<?php
 
+echo "<div style=\"float: left\">";
 $card1=$arr_flop[0];
 $card2=$arr_flop[1];
 $card3=$arr_flop[2];
@@ -214,45 +208,43 @@ $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
 
 //echo $row1['image'];
-echo "<div >".$img." </div> ";
+echo "<div >".$row1['image']." </div> ";
 ?>
 </div>
-<div class="cards" style="position: fixed; top:180px; left: 550px ">
+<div style="">
 <?php
 $sql="SELECT * FROM cards WHERE value='$card2' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
 
-echo "<div >".$img." </div> ";?>
+echo "<div >".$row1['image']." </div> ";?>
 
 </div>
-<div class="cards" style="position: fixed; top:180px; left: 650px ">
+<div style="">
 <?php
 $sql="SELECT * FROM cards WHERE value='$card3' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
 
-echo "<div >".$img." </div> ";?>
+echo "<div >".$row1['image']." </div> ";?>
 
 </div>
-<div class="cards" style="position: fixed; top:300px; left: 500px ">
+<div style="">
 <?php
 $sql="SELECT * FROM cards WHERE value='$card4' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
 
-echo "<div >".$img." </div> ";?>
-
+echo "<div >".$row1['image']." </div> ";?>
 
 </div>
-<div class="cards" style="position: fixed; top:300px; left: 600px ">
-
+<div style="">
 <?php
 $sql="SELECT * FROM cards WHERE value='$card5' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
-
-echo "<div >".$img." </div> ";?>
+echo $row1['value'];
+echo "<div >".$row1['image']." </div> ";?>
 
 </div>
 </div>

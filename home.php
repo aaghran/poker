@@ -6,6 +6,9 @@ if(isset($_SESSION['username'])) {
 }
 else {
 		$username=0;
+		$time=0;
+		$url = "index.php?e=login"; //Location to send to. 
+		header("Refresh: $time; url=$url");
 }
 
 ?>
@@ -54,9 +57,18 @@ background-size: cover;
     </head>
  <body>
 			<?php include_once("pages/nav.php") ?>
-<div style="position: fixed; left: 200px; top:100px">
+<div  class="profile" style="position: fixed; left: 200px; top:100px; color: white; background-color: rgba(224, 157, 38, 0.6) ; padding:20px; width: 60%; height: 70%">
 <div>
-<?php echo "<h1>".$username."</h2>";?>
+<?php echo "<h1>".$username."</h1>";
+echo "<h2> Score : 0</h2>";
+echo "<h2> Last Played : none</h2>";
+echo "<h3> Total Matches Played : 0</h3>";
+echo "<h3> Total Matches Won : 0</h3>";
+echo "<h3> Total Matches Lost : 0</h3>";
+
+
+?>
+<a href="table.php" class="btn btn-large  btn-danger" style="margin-top: 50px; float: right">Enter Table</a>
 </div>
 
 

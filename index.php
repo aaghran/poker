@@ -1,4 +1,18 @@
+<?php
+$error=$_GET['e'];
 
+if($error=='error')
+{
+print '<script type="text/javascript">'; 
+print 'alert("Invalid Username/Password. Please try again")'; 
+print '</script>';  
+}
+elseif($error=='login') {
+	print '<script type="text/javascript">'; 
+print 'alert("Please Login to continue.")'; 
+print '</script>';  
+	}
+ ?>
 <!--
 Project Name: PowKer
 
@@ -97,13 +111,13 @@ background-size: cover;
 <tr>
 <td width="76" style="color: black; font-size: 20px">Name</td>
 <td width="3">:</td>
-<td width="305"><input name="name" type="text" id="name" size="30"></td>
+<td width="305"><input name="name" type="text" id="name" size="30" required></td>
 
 
 
 <td style="color: black;font-size: 20px">Password</td>
 <td>:</td>
-<td><input name="password" type="password" id="password" size="30"></td>
+<td><input name="password" type="password" id="password" size="30" required></td>
 
 
 
