@@ -1,0 +1,70 @@
+<?php
+session_start();
+
+if(isset($_SESSION['username'])) {
+	$username=$_SESSION['username'];
+}
+else {
+		$username=0;
+}
+
+?>
+
+<!--
+Project Name: PowKer
+
+Members:
+1.Aaghran Ghosh 10/IT/81
+2.Arka Nayak 10/IT/44
+3.Sayan Banerjee 10/IT/
+4.Nitish Anand 10/IT/
+5.Toshika Khandelwal 10/IT/80
+
+-->
+<style type="text/css">
+body{
+background: url('img/back.jpg')no-repeat 0 100%  fixed;
+background-color: black;
+-moz-background-size: cover;
+
+-webkit-background-size: cover;
+
+-o-background-size: cover;
+
+background-size: cover;
+	
+	}
+
+</style>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Powker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Powker">
+    <meta name="author" content="aaghran" >
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    
+    </head>
+ <body style="overflow-x: auto">
+			<?php include_once("pages/nav.php") ?>
+
+<div  style="position: fixed; top:100px; left: 150px">
+<div class="span11 ">
+<img src="img/rules.png" alt="" style="width:1200px;" >
+
+</div>
+
+</div>
+
+</body>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.js"></script>
+</html>
+
