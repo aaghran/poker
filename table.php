@@ -50,7 +50,7 @@ width: 150px;
 left: 0;
 top: 200px;	
 	}
-.player4{
+.player4 {
 height: 300px;
 width: 150px;
 right: 0;
@@ -82,7 +82,7 @@ echo "<br />";
 $sql="SELECT * FROM cards WHERE value='$card1' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
-echo $row1['value'];
+//echo $row1['value'];
 //echo $row1['image'];
 echo "<div >".$row1['image']." </div> ";?>
 </div>
@@ -91,7 +91,7 @@ echo "<div >".$row1['image']." </div> ";?>
 $sql="SELECT * FROM cards WHERE value='$card2' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
-echo $row1['value'];
+//echo $row1['value'];
 echo "<div >".$row1['image']." </div> ";?>
 
 </div>
@@ -108,13 +108,13 @@ echo "<br />";
 $sql="SELECT * FROM cards WHERE value='$card1' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
-echo $row1['value'];
+//echo $row1['value'];
 echo "<div >".$row1['image']." </div> ";
 echo "<br />";
 $sql="SELECT * FROM cards WHERE value='$card2' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
-echo $row1['value'];
+//echo $row1['value'];
 echo "<div >".$row1['image']." </div> ";
 
 
@@ -133,7 +133,7 @@ echo "<br />";
 $sql="SELECT * FROM cards WHERE value='$card1' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
-echo $row1['value'];
+
 //echo $row1['image'];
 echo "<div >".$row1['image']." </div> ";?>
 </div>
@@ -142,7 +142,7 @@ echo "<div >".$row1['image']." </div> ";?>
 $sql="SELECT * FROM cards WHERE value='$card2' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
-echo $row1['value'];
+
 echo "<div >".$row1['image']." </div> ";?>
 
 </div>
@@ -158,30 +158,30 @@ echo "<br />";
 $sql="SELECT * FROM cards WHERE value='$card1' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
-echo $row1['value'];
+
 echo "<div >".$row1['image']." </div> ";
 echo "<br />";
 $sql="SELECT * FROM cards WHERE value='$card2' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
-echo $row1['value'];
+
 echo "<div >".$row1['image']." </div> ";
 
 
  ?>
 </div>
 
-<div class="dealer  span6" id="dealer">
+<div class="dealer  span6" id="dealer" style="display: inline">
 Dealer
 <?php 
 echo "<br /> Flop :   \t";
-echo implode(" ", $arr_flop);
+//echo implode(" ", $arr_flop);
 echo "<br />";
 $arr3=implode("", current($arr1));
-echo $arr3;
+//echo $arr3;
 echo "<br />";
 $arr4=implode("", current($arr2));
-echo $arr4;
+//echo $arr4;
 
 echo "<div style=\"float: left\">";
 $card1=$arr_flop[0];
@@ -221,7 +221,7 @@ echo "<div >".$row1['image']." </div> ";?>
 $sql="SELECT * FROM cards WHERE value='$card4' ";
 $result=mysql_query($sql) ;
 $row1=mysql_fetch_array($result);
-echo $row1['value'];
+
 echo "<div >".$row1['image']." </div> ";?>
 
 </div>
@@ -235,9 +235,6 @@ echo "<div >".$row1['image']." </div> ";?>
 
 </div>
 
-
-
- 
 </div>
 
  
