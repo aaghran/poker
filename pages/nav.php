@@ -35,7 +35,7 @@
          <a class="logo" href="home.php"><h1 style="color:rgb(243, 204, 154)">PowKe-R</h1></a>
         <ul>
         <li  style="margin-top:20px"><a class="link" href="home.php"><img src="img/link.png" style="height: 100px"/> </a></li>
-          <li  style="margin-top:20px"><a class="link" href="play.php"><img src="img/linkp.png" style="height: 100px"/> </a></li>
+          <li  style="margin-top:20px"><a class="link" href="table.php"><img src="img/linkp.png" style="height: 100px"/> </a></li>
           <li  style="margin-top:20px"><a class="link" href="faq.php"><img src="img/linkf.png" style="height: 100px"/></a></li>
           <li  style="margin-top:20px"><a class="link" href="rules.php"><img src="img/linkr.png" style="height: 100px"/></a></li>
         </ul> 

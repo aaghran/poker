@@ -11,7 +11,7 @@ $sql="SELECT * FROM users WHERE username='$username' and password='$password'";
 $result=mysql_query($sql);
 $row=mysql_fetch_array($result);
 echo $row;
-/*if($row){
+if($row){
 $_SESSION['username']=$row['username'];
 $time = 0; //Time (in seconds) to wait. 
 		$url = "../home.php"; //Location to send to. 
@@ -21,6 +21,6 @@ $time = 0; //Time (in seconds) to wait.
 $time = 0; //Time (in seconds) to wait. 
 		$url = "../index.php?e=error"; //Location to send to. 
 		header("Refresh: $time; url=$url");		
-		}*/
+		}
 ?>
 

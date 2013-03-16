@@ -2,9 +2,9 @@
 session_start();
 
 include('con.php');
-$username = mysql_real_escape_string($_POST[name]);
-$password = mysql_real_escape_string($_POST[password]);
-$email = mysql_real_escape_string($_POST[email]);
+$username = mysql_real_escape_string($_POST["name"]);
+$password = mysql_real_escape_string($_POST["password"]);
+$email = mysql_real_escape_string($_POST["email"]);
 
 
 $sql="SELECT * FROM users WHERE username='$username' and password='$password'";

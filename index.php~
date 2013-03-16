@@ -1,17 +1,6 @@
 <?php
 $error=$_GET['e'];
 
-if($error=='error')
-{
-	print '<script type="text/javascript">'; 
-print 'alert("Invalid Username/Password. Please try again")'; 
-print '</script>';  
-}
-elseif($error=='login') {
-	print '<script type="text/javascript">'; 
-print 'alert("Please Login to continue.")'; 
-print '</script>';  
-	}
  ?>
 <!--
 Project Name: PowKer
@@ -93,7 +82,7 @@ background-size: cover;
  <div class="navmenu">
          <a class="logo" href="index.php"><h1 style="color:rgb(243, 204, 154)">PowKe-R</h1></a>
         <ul>
-          <li  style="margin-top:20px"><a class="link" href="play.php"><img src="img/linkp.png" style="height: 100px"/> </a></li>
+          <li  style="margin-top:20px"><a class="link" href="table.php"><img src="img/linkp.png" style="height: 100px"/> </a></li>
           <li  style="margin-top:20px"><a class="link" href="faq.php"><img src="img/linkf.png" style="height: 100px"/></a></li>
           <li  style="margin-top:20px"><a class="link" href="rules.php"><img src="img/linkr.png" style="height: 100px"/></a></li>
         </ul> 
@@ -170,7 +159,32 @@ background-size: cover;
 </div>
 </div>
 </div>
+<?php 
 
+if($error=='error')
+{
+print '<script type="text/javascript">'; 
+print 'alert("Invalid Username/Password. Please try again")'; 
+print '</script>';  
+}
+elseif($error=='login') {
+	print '<script type="text/javascript">'; 
+print 'alert("Please Login to continue.")'; 
+print '</script>';  
+	}
+elseif($error=='user') {
+	print '<script type="text/javascript">'; 
+print 'alert("Sorry but Username already taken.")'; 
+print '</script>';  
+	}
+elseif($error=='register') {
+	print '<script type="text/javascript">'; 
+print 'alert("Sorry but could not Register.")'; 
+print '</script>';  
+	}
+
+
+?>
 
 
 </body>

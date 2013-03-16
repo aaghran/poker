@@ -39,10 +39,10 @@ background-size: cover;
     <![endif]-->
 
     <link href="css/bootstrap.css" rel="stylesheet">
-<script type="text/javascript"> function stop(){scroll.amount='10';}</script>
+<script type="text/javascript"> function stop(){scroll.amount='0';}</script>
 	<script type="text/javascript">
 	var image1=new Image()
-	image1.src="img/1.png"
+	image1.src="imag/1.png"
 	var image2=new Image()
 	image2.src="img/2.png"
 	var image3=new Image()
@@ -100,7 +100,7 @@ background-size: cover;
 						}
 </style>    
     
- <div class="slideshow" style="margin-top:50px" >
+ <div class="slideshow" >
   <img src="img/1.png" name="slide" width="750" height="750" />
 <script type="text/javascript">
 var step=1
@@ -111,7 +111,7 @@ function slideit()
  step++
  else
  step=1
- setTimeout("slideit()",3500)
+ setTimeout("slideit()",2500)
 }
 slideit()
 </script>

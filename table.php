@@ -10,7 +10,7 @@ else {
 		header("Refresh: $time; url=$url");
 }
 
-$img="<img src=\"img/cards/back.jpg \" style=\"height:100px; margin-top:5px; margin-left:5px\"";
+$img="<img src=\"img/cards/back.jpg \" style=\"height:100px; width:70px; margin-top:5px; margin-left:5px\"";
 ?>
 <!--
 Project Name: PowKer
@@ -89,6 +89,21 @@ position: fixed;
 <h3 style="color: white"><?php  echo $username;?></h3>
 <div class="row container	">
 <div class="cards" style="position: fixed; bottom:10px; left: 450px ">
+<div class="actions" style="margin-left: 100px">
+<form action="" >
+<div class="input-prepend ">
+  <span class="add-on">$</span>
+  <input class="span1" id="appendedPrependedInput" type="text" />
+  <input type="submit" value="BET" class="btn btn-medium btn-danger" />
+  </div>
+
+</form>
+<a class="btn btn-medium btn-danger"> Call </a>
+<a class="btn btn-medium btn-danger"> Fold </a>
+<a class="btn btn-medium btn-danger"> Hold </a>
+<a  class="btn btn-medium btn-danger"> Blind </a>
+</div>
+
 <?php 
 
 $card1=$arr_player_1[0];
@@ -116,7 +131,7 @@ echo "<div >".$row1['image']." </div> ";?>
 <div class="player player2" id="player2">
 Player 2
 <div class="row container	">
-<?php echo implode(" ", $arr_player_2);
+<?php  
 
 $card1=$arr_player_2[0];
 $card2=$arr_player_2[1];
@@ -166,7 +181,7 @@ echo "<div >".$img." </div> ";
 
 <div class="player player4" id="player4">
 Player 4
-<?php echo implode(" ", $arr_player_4);
+<?php 
 
 $card1=$arr_player_4[0];
 $card2=$arr_player_4[1];
@@ -256,8 +271,8 @@ echo "<div >".$img." </div> ";?>
 
 </div>
 </div>
+<a href="table.php" class="btn btn-medium btn-danger"> Deal </a>
 </div>
-
  
  </body>
  </html>
